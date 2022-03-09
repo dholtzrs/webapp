@@ -7,3 +7,11 @@ Webapp de teste com
   - REST
 - Grunt
   - builJar
+
+- TODO
+  - Conigurar JPA
+  - Configurar JWT
+  - Adicionar Service/DAO
+  - Adicionar/Configurar Quartz
+    - Adicionar Jobs de teste
+  
