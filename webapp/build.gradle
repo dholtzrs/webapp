@@ -1,0 +1,58 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin")
+    }
+}
+
+
+
+
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	
+	id 'java'
+}
+
+group = 'br.com.sb'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+            srcDirs 'src/auth/java'
+            srcDirs 'src/core/java'
+            srcDirs 'src/core-impl/java'
+        }
+    }
+ }
+
+bootJar   {
+    mainClass = 'br.com.sb.webapp.WebappApplication'
+}
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.auth0:java-jwt:3.10.3'
+	implementation 'org.springframework.security:spring-security-core:5.6.2'
+	implementation 'org.springframework.security:spring-security-web:5.6.2'
+	implementation 'org.springframework.security:spring-security-config:5.6.2'	
+	
+	implementation 'commons-beanutils:commons-beanutils:1.9.4'	
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+
+
